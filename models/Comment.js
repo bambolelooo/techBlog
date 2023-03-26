@@ -19,20 +19,6 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
-    project_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'project',
-        key: 'id',
-      },
-    },
   },
   {
     sequelize,
