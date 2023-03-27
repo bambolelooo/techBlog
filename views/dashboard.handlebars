@@ -1,0 +1,53 @@
+<div class='flex justify-center text-white text-center'>
+    <h2 class='text-4xl'>Welcome, {{name}}!</h2>
+</div>
+
+<div class='flex justify-between w-5/6 mx-auto text-white gap-4'>
+    <form
+        class='new-post-form p-4 w-full rounded-xl bg-yellow-800 new-post-form flex flex-col justify-between items-start h-full gap-3'
+    >
+        <h3 class='text-2xl'>Create a new Post:</h3>
+        <div class='flex flex-row w-full justify-between'>
+            <label for='project-name'>Post title:</label>
+            <input
+                class='text-black rounded-lg p-2 w-2/3'
+                type='text'
+                id='post-title'
+                name='post-title'
+            />
+        </div>
+        <div class='flex flex-row w-full justify-between gap-3'>
+            <label for='post-content'>Content:</label>
+            <textarea
+                class='form-input rounded-xl text-black p-2 w-full'
+                id='post-content'
+                name='post-content'
+                rows='15'
+            ></textarea>
+        </div>
+
+        <button
+            type='submit'
+            class='p-2 bg-yellow-900 hover:shadow-2xl rounded-xl self-center'
+        >Create</button>
+
+    </form>
+    <div class='w-full flex flex-col gap-3 bg-yellow-800 p-3 rounded-xl'>
+        <h3 class='text-3xl text-center'>Your posts</h3>
+        {{#each Posts as |post|}}
+            <div class='w-full flex justify-between'>
+                <a href='post/{{post.id}}'><h1
+                        class='text-2xl'
+                    >{{post.title}}</h1></a>
+                <div>
+                    <button
+                        class='del-button p-2 bg-yellow-900 rounded-xl text-white hover:shadow-2xl text-center'
+                        post-id='{{post.id}}'
+                    >Remove</button>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<script src='./js/dashboard.js'></script>
