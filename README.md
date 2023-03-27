@@ -56,6 +56,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 Biult with express and handlebars this website is a simple social network with comments and posts
+![Screenshot 2023-03-27 at 1 07 44 PM](https://user-images.githubusercontent.com/63548697/228015312-77b00ea6-e2ad-477f-888e-21a02d6b2503.png)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
