@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "seed": "node seeds/seed.js"
+    "start": "npx tailwindcss -i ./tailwind/input.css -o ./public/css/output.css && node server.js",
+    "seed": "node seeds/seed.js",
+    "dev": "npx tailwindcss -i ./tailwind/input.css -o ./public/css/output.css && nodemon server.js",
+    "tailwind-watch": "npx tailwindcss -i ./tailwind/input.css -o ./public/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +26,8 @@
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
-    "prettier": "^2.1.2"
+    "nodemon": "^2.0.22",
+    "prettier": "^2.1.2",
+    "tailwindcss": "^3.2.7"
   }
 }

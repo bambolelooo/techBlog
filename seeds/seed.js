@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection')
-const { User, Post, Comment } = require('../models')
+const { User, Post } = require('../models')
 async function seedDatabase() {
     await sequelize.sync({ force: true })
     const postData = [
@@ -19,19 +19,19 @@ async function seedDatabase() {
             user_id: 3,
         },
     ]
-    const user1 = await User.create({
+    await User.create({
         name: 'John Doe',
         email: 'johndoe@example.com',
         password: 'password123',
     })
 
-    const user2 = await User.create({
+    await User.create({
         name: 'Jane Smith',
         email: 'janesmith@example.com',
         password: 'password456',
     })
 
-    const user3 = await User.create({
+    await User.create({
         name: 'Bob Johnson',
         email: 'bobjohnson@example.com',
         password: 'password789',
