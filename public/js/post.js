@@ -14,7 +14,7 @@ const commentFormHandler = async (event) => {
         })
 
         if (response.ok) {
-            // If successful, redirect the browser to the profile page
+            // If successful, redirect the browser to the dashboard page
             document.location.replace(window.location.href)
         } else {
             alert(response.statusText)
